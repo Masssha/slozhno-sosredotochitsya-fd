@@ -1,5 +1,248 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color);
+  background-image: var(--bg-dark-path); 
+  background-attachment: fixed;
+  margin: 10px;
+}
+
+.header {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr fit-content;
+  margin-block-end: 40px;
+}
+
+.header__theme-menu {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  block-size: 26px;
+  inline-size: 70px;
+  color: var(--accent-color);
+  text-align: center;
+  font-family: var(--base-font-family);
+  font-size: var(--text-font-size);
+  font-style: normal;
+  font-weight: var(--text-font-weight-reg);
+  background-color: transparent;
+  border: 1px solid rgba(255, 0, 112, 0.00);
+  place-content: center;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--accent-color-hover);
+}
+
+/* .header__theme-menu-button:focus {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+} */
+
+.header__theme-menu-button:active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  color: var(--shadow-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-family: var(--base-font-family);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: var(--text-font-weight-bold);
+  line-height: 82.5%;
+  align-self: center;
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.header__text {
+  color: var(--bg-color);
+  font-family: var(--base-font-family);
+  font-size: var(--text-font-size);
+  font-style: normal;
+  font-weight: var(--text-font-weight-bold);
+  line-height: var(--text-line-height); 
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-content: center;
+  align-items: center;
+  block-size: fit-content;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(fit-content, 1fr);
+  gap: 50px;
+}
+
+.content__text {
+  display: grid;
+}
+
+.content__text__block {
+  display: grid;
+  gap: 20px;
+}
+
+.content__text__block__title {
+  color: var(--accent-color);
+  font-family: var(--base-font-family);
+  font-size: var(--text-font-size);
+  font-style: normal;
+  font-weight: var(--text-font-weight-bold);
+  line-height: var(--text-line-height); 
+}
+
+.card__list {
+  display: grid;
+  gap: 20px;
+}
+
+.content__card {
+    display: grid;
+    gap: 10px;
+    align-content: start;
+}
+
+.content__card__title {
+  color: var(--bg-color);
+  font-family: var(--base-font-family);
+  font-size: var(--text-font-size);
+  font-style: normal;
+  font-weight: var(--text-font-weight-bold);
+  line-height: var(--text-line-height); 
+  block-size: fit-content;
+
+}
+
+.content__card__text {
+  color: var(--text-color);
+  font-family: var(--base-font-family);
+  font-size: var(--text-font-size);
+  font-style: normal;
+  font-weight: var(--text-font-weight-reg);
+  line-height: var(--text-line-height); 
+
+}
+
+.gallery {
+  display: grid;
+}
+
+.gallery__item {
+  inline-size: 100%;
+  loading: lazy;
+}
+
+.footer {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  place-items: center;
+}
+
+.footer__title {
+    color: var(--shadow-color);
+    text-shadow: 4px 4px 0 var(--accent-color);
+    font-family: var(--base-font-family);
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    font-style: normal;
+    font-weight: var(--text-font-weight-bold);
+    line-height: 82.5%;
+    align-self: center;
+}
+
+
+@media (width > 768px) {
+  .page {margin: 20px;}
+
+  .header__text {grid-column: 2;}
+
+  .two-column {grid-template-columns: 1fr 2fr;}
+
+  .gallery__block {
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    aspect-ratio: 1 / 1;
+    grid-template-areas:
+    "one one two"
+    "three four two"
+    "three five five";
+  }
+
+  .gallery__block img:first-of-type {
+    grid-area: one;
+}
+
+  .gallery__block img:nth-of-type(2) {
+    grid-area: two;
+  }
+
+  .gallery__block img:nth-of-type(3) {
+    grid-area: three;
+  }
+
+  .gallery__block img:nth-of-type(4) {
+    grid-area: four;
+  }
+
+  .gallery__block img:nth-of-type(5) {
+    grid-area: five;
+  }
+
+  .gallery__block img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+  .header__title {font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);}
+  .footer__title {font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);}
+
+}
+
+
+@media (width > 1024px) {
+  .one-three-column {grid-template-columns: 1fr 1fr 1fr;}
+  .header__theme-menu {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
 }
