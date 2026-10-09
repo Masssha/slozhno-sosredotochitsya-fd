@@ -3,14 +3,16 @@
   и их переопределение под различные устройства
 */
 :root {
-  --bg-dark-path: url("../images/cover-image-dark.png");
-  --bg-light-path: url("../images/cover-image-light.png");
+  --bg-path: url("../images/cover-image-dark.png");
 
   --text-font-size: 18px;
   --text-font-weight-bold: 700;
   --text-font-weight-reg: 400;
   --base-font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
   --text-line-height: 23.4px; 
+  --min-block-size: 668px;
+  --margin-block-end-s: 40px;
+  --margin-block-end-m: 60px;
 
   --accent-color: #FF0070;
   --accent-color-hover: rgba(255, 0, 112, 0.40);
