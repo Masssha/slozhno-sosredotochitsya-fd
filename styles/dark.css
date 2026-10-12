@@ -4,29 +4,6 @@
   переключая тему
 */
 
-.decor {
-  color: var(--accent-color);
-  font-family: var(--base-font-family);
-  font-size: var(--text-font-size);
-  font-style: normal;
-  font-weight: var(--text-font-weight-reg);
-  line-height: 25px; 
-  position: absolute;
-  inset-inline-end: 9px;
-  inset-block-start: 0;
-}
-
-.decor::after {
-  content: "";
-  display: inline-block;
-  margin: 2px 0 0 10px;
-  width: 9px;
-  height: 9px;
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  filter: drop-shadow(0 0 4px var(--accent-color));
-}
-
 :root.theme-dark {
   --bg-path: url("../images/cover-image-dark.png");
 
@@ -35,4 +12,8 @@
   --shadow-color: #DB00FF;
   --bg-color: #000028;
   --text-color: #F1B2CE;
+  --text-color-lead: var(--bg-color);
+  --content__section__title: var(--accent-color);
+
+  --decor-visibility: visible;
 }

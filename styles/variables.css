@@ -8,7 +8,7 @@
   --text-font-size: 18px;
   --text-font-weight-bold: 700;
   --text-font-weight-reg: 400;
-  --base-font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  --base-font-family: "IBM Plex Mono", Arial, "Courier New", monospace;
   --text-line-height: 23.4px; 
   --min-block-size: 668px;
   --margin-block-end-s: 40px;
@@ -19,5 +19,9 @@
   --shadow-color: #DB00FF;
   --bg-color: #000028;
   --text-color: #F1B2CE;
+  --text-color-lead: var(--bg-color);
+  --content__section__title: var(--accent-color);
+
+  --decor-visibility: visible;
 
 }
