@@ -13,6 +13,7 @@
   --min-block-size: 668px;
   --margin-block-end-s: 40px;
   --margin-block-end-m: 60px;
+  --page-padding: 0 10px;
 
   --accent-color: #FF0070;
   --accent-color-hover: rgba(255, 0, 112, 0.40);
