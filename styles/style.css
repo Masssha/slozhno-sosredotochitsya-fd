@@ -272,7 +272,7 @@ h5 {
   align-self: center;
 }
 
-@media (width > 768px) {
+@media (width >= 768px) {
   :root {
     --page-padding: 0 20px;
     --decorated-zone-margin: 20px;
@@ -388,7 +388,7 @@ h5 {
   }
 }
 
-@media (width > 1024px) {
+@media (width >= 1024px) {
   .content__section_causes .content__cards {
     grid-template-columns: repeat(3, 1fr);
     grid-column-start: 1;
