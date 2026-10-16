@@ -21,7 +21,7 @@
   --bg-color: #000028;
   --text-color: #F1B2CE;
   --text-color-lead: var(--bg-color);
-  --content__section__title: var(--accent-color);
+  --main-color: var(--accent-color);
 
   --decor-visibility: visible;
 

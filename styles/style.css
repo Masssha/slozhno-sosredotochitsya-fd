@@ -53,7 +53,7 @@
   border: 1px solid rgba(255, 0, 112, 0);
   place-content: center;
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--main-color);
 }
 
 h2,
@@ -72,11 +72,11 @@ h5 {
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--main-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--content__section__title);
+  border: 1px solid var(--main-color);
 }
 
 .header__title {
@@ -119,8 +119,8 @@ h5 {
   inset-inline-end: 10px;
   width: 25px;
   height: 25px;
-  border-block-start: 1px solid var(--content__section__title);
-  border-inline-end: 1px solid var(--content__section__title);
+  border-block-start: 1px solid var(--main-color);
+  border-inline-end: 1px solid var(--main-color);
 }
 
 .decorated-zone::after {
@@ -130,8 +130,8 @@ h5 {
   inset-inline-start: 10px;
   width: 25px;
   height: 25px;
-  border-block-end: 1px solid var(--content__section__title);
-  border-inline-start: 1px solid var(--content__section__title);
+  border-block-end: 1px solid var(--main-color);
+  border-inline-start: 1px solid var(--main-color);
 }
 
 .decor {
@@ -172,7 +172,7 @@ h5 {
 }
 
 .content__section__title {
-  color: var(--content__section__title);
+  color: var(--main-color);
   font-family: var(--base-font-family);
   font-size: var(--text-font-size);
   font-style: normal;

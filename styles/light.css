@@ -12,7 +12,7 @@
   --bg-color: #fff1f7;
   --text-color: #353430;
   --text-color-lead: var(--text-color);
-  --content__section__title: var(--text-color);
+  --main-color: var(--text-color);
   --decor-visibility: hidden;
 }
 
@@ -26,7 +26,7 @@
     --bg-color: #fff1f7;
     --text-color: #353430;
     --text-color-lead: var(--text-color);
-    --content__section__title: var(--text-color);
+    --main-color: var(--text-color);
     --decor-visibility: hidden;
   }
 }
